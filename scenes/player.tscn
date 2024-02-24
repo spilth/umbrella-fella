@@ -221,7 +221,7 @@ position = Vector2(0, -2)
 sprite_frames = SubResource("SpriteFrames_8b4j6")
 animation = &"running"
 autoplay = "idle"
-frame_progress = 0.490837
+frame_progress = 0.99433
 
 [node name="JumpSound" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("7_vqbet")

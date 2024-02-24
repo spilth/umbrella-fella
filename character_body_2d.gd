@@ -24,6 +24,9 @@ func _physics_process(delta):
 	if Input.is_action_just_pressed("Jump") and is_on_floor():
 		velocity.y = JUMP_VELOCITY
 		jump_sound.play()
+		
+	if Input.is_action_just_pressed("Down") and is_on_floor():
+		position.y += 3
 				
 
 	# Get the input direction and handle the movement/deceleration.
