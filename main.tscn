@@ -1,6 +1,7 @@
-[gd_scene load_steps=2 format=3 uid="uid://xyxckdkgbf66"]
+[gd_scene load_steps=3 format=3 uid="uid://xyxckdkgbf66"]
 
 [ext_resource type="Script" path="res://PlayButton.gd" id="1_fweyu"]
+[ext_resource type="AudioStream" uid="uid://c5hedygfpr5p8" path="res://Main Menu.mp3" id="2_81f7c"]
 
 [node name="Node" type="Node"]
 
@@ -53,5 +54,9 @@ grow_horizontal = 2
 text = " A S D = Movement
 Space = Jump
         O = Open Umbrella"
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("2_81f7c")
+autoplay = true
 
 [connection signal="pressed" from="Button" to="Button" method="_on_pressed"]
