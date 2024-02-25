@@ -1,10 +1,11 @@
-[gd_scene load_steps=10 format=3 uid="uid://dxtmt0ipl4xtw"]
+[gd_scene load_steps=11 format=3 uid="uid://dxtmt0ipl4xtw"]
 
 [ext_resource type="Texture2D" uid="uid://6e4y124786go" path="res://background.png" id="1_bnny8"]
 [ext_resource type="Texture2D" uid="uid://bymyxl2g1ia2o" path="res://Terrain (16x16).png" id="2_4ygg5"]
 [ext_resource type="PackedScene" uid="uid://d1kenyvvg6wo2" path="res://scenes/player.tscn" id="3_xbl0f"]
 [ext_resource type="AudioStream" uid="uid://durfm5mf3juj3" path="res://music.mp3" id="4_ta1r8"]
 [ext_resource type="PackedScene" uid="uid://drow2c7r2l2uw" path="res://scenes/goal.tscn" id="5_7k0qf"]
+[ext_resource type="PackedScene" uid="uid://buaif1wcbhyvs" path="res://ending.tscn" id="6_r8q64"]
 
 [sub_resource type="TileMapPattern" id="TileMapPattern_r740i"]
 tile_data = PackedInt32Array(0, 1114112, 4, 65536, 1114112, 6, 1, 1179648, 4, 65537, 1179648, 6, 2, 1245184, 4, 65538, 1245184, 6)
@@ -643,3 +644,4 @@ editor_draw_limits = true
 
 [node name="Goal" parent="." instance=ExtResource("5_7k0qf")]
 position = Vector2(1038, 179)
+destination = ExtResource("6_r8q64")
