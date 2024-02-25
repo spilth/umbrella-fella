@@ -1,4 +1,4 @@
-[gd_scene load_steps=33 format=3 uid="uid://d1kenyvvg6wo2"]
+[gd_scene load_steps=34 format=3 uid="uid://d1kenyvvg6wo2"]
 
 [ext_resource type="Script" path="res://character_body_2d.gd" id="1_vgf6t"]
 [ext_resource type="Texture2D" uid="uid://45pr5u6ugh73" path="res://Block (32x32).png" id="2_j0m0m"]
@@ -7,6 +7,7 @@
 [ext_resource type="Texture2D" uid="uid://dbbqklybdd23n" path="res://Float (32x32).png" id="4_yn3jv"]
 [ext_resource type="Texture2D" uid="uid://cfckv1p5ee14r" path="res://Run (32x32).png" id="5_msah8"]
 [ext_resource type="AudioStream" uid="uid://chgivmx3tysgk" path="res://jump.wav" id="7_vqbet"]
+[ext_resource type="AudioStream" uid="uid://dvk2ywd3t03ba" path="res://float.wav" id="8_gq48v"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_1nvyn"]
 radius = 11.0
@@ -225,3 +226,8 @@ frame_progress = 0.99433
 
 [node name="JumpSound" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("7_vqbet")
+bus = &"Effects"
+
+[node name="FloatSound" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("8_gq48v")
+bus = &"Effects"
