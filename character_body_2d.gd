@@ -15,7 +15,7 @@ func _physics_process(delta):
 	if not is_on_floor():
 		if Input.is_action_pressed("Open Umbrella") && velocity.y > 0:
 			animated_sprite_2d.animation = "floating"
-			velocity.y += gravity / 16 * delta
+			velocity.y = gravity * 4 * delta
 		else:
 			animated_sprite_2d.animation = "jumping"
 			velocity.y += gravity * delta
