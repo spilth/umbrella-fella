@@ -1,13 +1,13 @@
 [gd_scene load_steps=34 format=3 uid="uid://d1kenyvvg6wo2"]
 
-[ext_resource type="Script" path="res://character_body_2d.gd" id="1_vgf6t"]
-[ext_resource type="Texture2D" uid="uid://45pr5u6ugh73" path="res://Block (32x32).png" id="2_j0m0m"]
-[ext_resource type="Texture2D" uid="uid://r7b7nckc1ntf" path="res://Idle (32x32).png" id="3_85jkk"]
-[ext_resource type="Texture2D" uid="uid://dsikvibrlrhwr" path="res://Jump (32x32).png" id="3_jvku2"]
-[ext_resource type="Texture2D" uid="uid://dbbqklybdd23n" path="res://Float (32x32).png" id="4_yn3jv"]
-[ext_resource type="Texture2D" uid="uid://cfckv1p5ee14r" path="res://Run (32x32).png" id="5_msah8"]
-[ext_resource type="AudioStream" uid="uid://chgivmx3tysgk" path="res://jump.wav" id="7_vqbet"]
-[ext_resource type="AudioStream" uid="uid://dvk2ywd3t03ba" path="res://float.wav" id="8_gq48v"]
+[ext_resource type="Script" path="res://scenes/player.gd" id="1_vgf6t"]
+[ext_resource type="Texture2D" uid="uid://45pr5u6ugh73" path="res://graphics/Block (32x32).png" id="2_j0m0m"]
+[ext_resource type="Texture2D" uid="uid://r7b7nckc1ntf" path="res://graphics/Idle (32x32).png" id="3_85jkk"]
+[ext_resource type="Texture2D" uid="uid://dsikvibrlrhwr" path="res://graphics/Jump (32x32).png" id="3_jvku2"]
+[ext_resource type="Texture2D" uid="uid://dbbqklybdd23n" path="res://graphics/Float (32x32).png" id="4_yn3jv"]
+[ext_resource type="Texture2D" uid="uid://cfckv1p5ee14r" path="res://graphics/Run (32x32).png" id="5_msah8"]
+[ext_resource type="AudioStream" uid="uid://chgivmx3tysgk" path="res://audio/effects/jump.wav" id="7_vqbet"]
+[ext_resource type="AudioStream" uid="uid://dvk2ywd3t03ba" path="res://audio/effects/float.wav" id="8_gq48v"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_1nvyn"]
 radius = 11.0

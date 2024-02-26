@@ -1,9 +1,10 @@
 [gd_scene load_steps=3 format=3 uid="uid://xyxckdkgbf66"]
 
-[ext_resource type="Script" path="res://PlayButton.gd" id="1_fweyu"]
-[ext_resource type="AudioStream" uid="uid://c5hedygfpr5p8" path="res://Main Menu.mp3" id="2_81f7c"]
+[ext_resource type="Script" path="res://scenes/menu.gd" id="1_061r3"]
+[ext_resource type="AudioStream" uid="uid://c5hedygfpr5p8" path="res://audio/music/menu.mp3" id="3_bpixi"]
 
 [node name="Node" type="Node"]
+script = ExtResource("1_061r3")
 
 [node name="ColorRect" type="ColorRect" parent="."]
 anchors_preset = 15
@@ -28,7 +29,6 @@ grow_vertical = 2
 theme_override_font_sizes/font_size = 32
 action_mode = 0
 text = "Play!"
-script = ExtResource("1_fweyu")
 
 [node name="Label" type="Label" parent="."]
 anchors_preset = 5
@@ -56,8 +56,8 @@ Space = Jump
   Shift = Open Umbrella"
 
 [node name="MainMenuMusic" type="AudioStreamPlayer2D" parent="."]
-stream = ExtResource("2_81f7c")
+stream = ExtResource("3_bpixi")
 autoplay = true
 bus = &"Music"
 
-[connection signal="pressed" from="Button" to="Button" method="_on_pressed"]
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

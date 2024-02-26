@@ -10,8 +10,8 @@ config_version=5
 
 [application]
 
-config/name="Umbrella Fella"
-run/main_scene="res://main.tscn"
+config/name="Umbrella"
+run/main_scene="res://scenes/menu.tscn"
 config/features=PackedStringArray("4.2", "GL Compatibility")
 config/icon="res://icon.svg"
 

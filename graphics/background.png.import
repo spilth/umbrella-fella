@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dbbqklybdd23n"
-path="res://.godot/imported/Float (32x32).png-7b25b67082cb9e23488d4283179fda76.ctex"
+uid="uid://6e4y124786go"
+path="res://.godot/imported/background.png-6d1f8d709b584488178339644fc2e881.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Float (32x32).png"
-dest_files=["res://.godot/imported/Float (32x32).png-7b25b67082cb9e23488d4283179fda76.ctex"]
+source_file="res://graphics/background.png"
+dest_files=["res://.godot/imported/background.png-6d1f8d709b584488178339644fc2e881.ctex"]
 
 [params]
 

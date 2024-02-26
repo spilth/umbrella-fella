@@ -1,8 +1,9 @@
 [gd_scene load_steps=2 format=3 uid="uid://buaif1wcbhyvs"]
 
-[ext_resource type="Script" path="res://PlayButton.gd" id="1_dnlm7"]
+[ext_resource type="Script" path="res://scenes/ending.gd" id="1_l443l"]
 
 [node name="Node" type="Node"]
+script = ExtResource("1_l443l")
 
 [node name="ColorRect" type="ColorRect" parent="."]
 anchors_preset = 15
@@ -19,7 +20,6 @@ offset_right = 726.0
 offset_bottom = 485.0
 action_mode = 0
 text = "Play again!"
-script = ExtResource("1_dnlm7")
 
 [node name="RichTextLabel" type="RichTextLabel" parent="."]
 offset_left = 123.0
@@ -29,4 +29,4 @@ offset_bottom = 248.0
 theme_override_font_sizes/normal_font_size = 128
 text = "You have won!"
 
-[connection signal="pressed" from="Button" to="Button" method="_on_pressed"]
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
