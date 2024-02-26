@@ -596,7 +596,7 @@ pattern_1 = SubResource("TileMapPattern_mtu7q")
 
 [node name="Node" type="Node"]
 
-[node name="TextureRect" type="TextureRect" parent="."]
+[node name="Backgreound" type="TextureRect" parent="."]
 offset_top = -32.0
 offset_right = 1120.0
 offset_bottom = 992.0
