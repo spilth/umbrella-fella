@@ -1,7 +1,27 @@
-[gd_scene load_steps=3 format=3 uid="uid://xyxckdkgbf66"]
+[gd_scene load_steps=9 format=3 uid="uid://xyxckdkgbf66"]
 
 [ext_resource type="Script" path="res://scenes/menu.gd" id="1_061r3"]
+[ext_resource type="Theme" uid="uid://bo4h3j1vvbdu8" path="res://theme.tres" id="2_g7jr4"]
 [ext_resource type="AudioStream" uid="uid://c5hedygfpr5p8" path="res://audio/music/menu.mp3" id="3_bpixi"]
+
+[sub_resource type="InputEventKey" id="InputEventKey_5h8p8"]
+device = -1
+keycode = 4194309
+
+[sub_resource type="InputEventKey" id="InputEventKey_fg5f4"]
+device = -1
+keycode = 32
+unicode = 32
+
+[sub_resource type="Shortcut" id="Shortcut_432sd"]
+events = [SubResource("InputEventKey_5h8p8"), SubResource("InputEventKey_fg5f4")]
+
+[sub_resource type="InputEventKey" id="InputEventKey_t8wot"]
+device = -1
+keycode = 4194305
+
+[sub_resource type="Shortcut" id="Shortcut_yrsti"]
+events = [SubResource("InputEventKey_t8wot")]
 
 [node name="Node" type="Node"]
 script = ExtResource("1_061r3")
@@ -35,9 +55,12 @@ offset_top = 146.0
 offset_right = 128.0
 offset_bottom = 221.0
 grow_horizontal = 2
-text = " A S D = Movement
+text = "            A S D = Movement
 Space = Jump
-  Shift = Open Umbrella"
+                    Shift = Open Umbrella
+
+Press Enter to Play!"
+horizontal_alignment = 1
 
 [node name="PlayButton" type="Button" parent="."]
 anchors_preset = 8
@@ -45,15 +68,37 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -141.5
-offset_top = -79.0
-offset_right = 141.5
-offset_bottom = 79.0
+offset_left = -141.0
+offset_top = -36.0
+offset_right = 142.0
+offset_bottom = 53.0
 grow_horizontal = 2
 grow_vertical = 2
+theme = ExtResource("2_g7jr4")
 theme_override_font_sizes/font_size = 32
 action_mode = 0
-text = "Play!"
+shortcut = SubResource("Shortcut_432sd")
+text = "Play"
+
+[node name="QuitButton" type="Button" parent="."]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -74.0
+offset_top = 77.0
+offset_right = 74.0
+offset_bottom = 130.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme = ExtResource("2_g7jr4")
+theme_override_font_sizes/font_size = 32
+action_mode = 0
+shortcut = SubResource("Shortcut_yrsti")
+text = "Quit"
 
 [node name="MainMenuMusic" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("3_bpixi")
@@ -61,3 +106,4 @@ autoplay = true
 bus = &"Music"
 
 [connection signal="pressed" from="PlayButton" to="." method="_on_play_button_pressed"]
+[connection signal="pressed" from="QuitButton" to="." method="_on_quit_button_pressed"]

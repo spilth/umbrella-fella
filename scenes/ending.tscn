@@ -1,7 +1,21 @@
-[gd_scene load_steps=3 format=3 uid="uid://buaif1wcbhyvs"]
+[gd_scene load_steps=7 format=3 uid="uid://buaif1wcbhyvs"]
 
 [ext_resource type="Script" path="res://scenes/ending.gd" id="1_l443l"]
 [ext_resource type="AudioStream" uid="uid://bo8d2k24rra4y" path="res://audio/music/ending.mp3" id="2_vpqru"]
+
+[sub_resource type="InputEventKey" id="InputEventKey_urhve"]
+device = -1
+keycode = 4194309
+
+[sub_resource type="Shortcut" id="Shortcut_qkd8h"]
+events = [SubResource("InputEventKey_urhve")]
+
+[sub_resource type="InputEventKey" id="InputEventKey_rfntr"]
+device = -1
+keycode = 4194305
+
+[sub_resource type="Shortcut" id="Shortcut_k88md"]
+events = [SubResource("InputEventKey_rfntr")]
 
 [node name="Node" type="Node"]
 script = ExtResource("1_l443l")
@@ -37,6 +51,7 @@ grow_vertical = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
 action_mode = 0
+shortcut = SubResource("Shortcut_qkd8h")
 text = "Play again!"
 
 [node name="MainMenuButton" type="Button" parent="."]
@@ -54,6 +69,7 @@ grow_vertical = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
 action_mode = 0
+shortcut = SubResource("Shortcut_k88md")
 text = "Main Menu
 "
 
