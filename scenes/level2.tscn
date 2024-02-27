@@ -649,8 +649,10 @@ drag_vertical_enabled = true
 editor_draw_limits = true
 
 [node name="Goal" parent="." instance=ExtResource("5_frhf7")]
+unique_name_in_owner = true
 position = Vector2(1038, 179)
 destination = ExtResource("6_61333")
+coinsRequired = 9
 
 [node name="Coins" type="Node" parent="."]
 
