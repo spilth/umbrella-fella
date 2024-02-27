@@ -4,7 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://bymyxl2g1ia2o" path="res://graphics/Terrain (16x16).png" id="2_hat7r"]
 [ext_resource type="PackedScene" uid="uid://d1kenyvvg6wo2" path="res://scenes/player.tscn" id="3_q6eff"]
 [ext_resource type="AudioStream" uid="uid://durfm5mf3juj3" path="res://audio/music/level1.mp3" id="4_dr38r"]
-[ext_resource type="PackedScene" uid="uid://drow2c7r2l2uw" path="res://scenes/goal.tscn" id="5_frhf7"]
+[ext_resource type="PackedScene" uid="uid://drow2c7r2l2uw" path="res://scenes/exit.tscn" id="5_gin1w"]
 [ext_resource type="PackedScene" uid="uid://buaif1wcbhyvs" path="res://scenes/ending.tscn" id="6_61333"]
 [ext_resource type="PackedScene" uid="uid://bb7ccon8eu531" path="res://scenes/coin.tscn" id="7_a82yy"]
 
@@ -648,7 +648,7 @@ drag_horizontal_enabled = true
 drag_vertical_enabled = true
 editor_draw_limits = true
 
-[node name="Goal" parent="." instance=ExtResource("5_frhf7")]
+[node name="Exit" parent="." instance=ExtResource("5_gin1w")]
 unique_name_in_owner = true
 position = Vector2(1038, 179)
 destination = ExtResource("6_61333")

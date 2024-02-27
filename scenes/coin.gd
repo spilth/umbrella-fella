@@ -4,7 +4,7 @@ extends Area2D
 @onready var sprite_2d = $Sprite2D
 @onready var collision_shape_2d = $CollisionShape2D
 
-@onready var goal = %Goal
+@onready var exit = %Exit
 
 func _on_body_entered(body):
 	if (body.name == "Player"):
@@ -14,7 +14,7 @@ func _on_body_entered(body):
 func pickup():
 	sprite_2d.visible = false
 	collision_shape_2d.disabled = true
-	goal.accept_coin()
+	exit.insert_coin()
 
 func _on_audio_stream_player_2d_finished():
 	queue_free()

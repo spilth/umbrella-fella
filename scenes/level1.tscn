@@ -3,7 +3,7 @@
 [ext_resource type="Texture2D" uid="uid://bymyxl2g1ia2o" path="res://graphics/Terrain (16x16).png" id="2_4ygg5"]
 [ext_resource type="PackedScene" uid="uid://d1kenyvvg6wo2" path="res://scenes/player.tscn" id="3_xbl0f"]
 [ext_resource type="AudioStream" uid="uid://durfm5mf3juj3" path="res://audio/music/level1.mp3" id="4_ta1r8"]
-[ext_resource type="PackedScene" uid="uid://drow2c7r2l2uw" path="res://scenes/goal.tscn" id="5_7k0qf"]
+[ext_resource type="PackedScene" uid="uid://drow2c7r2l2uw" path="res://scenes/exit.tscn" id="5_7k0qf"]
 [ext_resource type="PackedScene" uid="uid://41mb3sswdrhw" path="res://scenes/level2.tscn" id="6_tj6jo"]
 [ext_resource type="PackedScene" uid="uid://bb7ccon8eu531" path="res://scenes/coin.tscn" id="7_5g2mm"]
 
@@ -642,27 +642,16 @@ drag_horizontal_enabled = true
 drag_vertical_enabled = true
 editor_draw_limits = true
 
-[node name="Goal" parent="." instance=ExtResource("5_7k0qf")]
+[node name="Exit" parent="." instance=ExtResource("5_7k0qf")]
 unique_name_in_owner = true
 position = Vector2(1038, 179)
 destination = ExtResource("6_tj6jo")
+coinsRequired = 16
 
 [node name="Coins" type="Node" parent="."]
 
 [node name="Coin" parent="Coins" instance=ExtResource("7_5g2mm")]
 position = Vector2(337, 679)
-
-[node name="Coin4" parent="Coins" instance=ExtResource("7_5g2mm")]
-position = Vector2(83, 914)
-
-[node name="Coin5" parent="Coins" instance=ExtResource("7_5g2mm")]
-position = Vector2(146, 914)
-
-[node name="Coin6" parent="Coins" instance=ExtResource("7_5g2mm")]
-position = Vector2(209, 913)
-
-[node name="Coin7" parent="Coins" instance=ExtResource("7_5g2mm")]
-position = Vector2(209, 913)
 
 [node name="Coin2" parent="Coins" instance=ExtResource("7_5g2mm")]
 position = Vector2(634, 680)

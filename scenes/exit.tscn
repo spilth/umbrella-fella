@@ -1,18 +1,19 @@
-[gd_scene load_steps=4 format=3 uid="uid://drow2c7r2l2uw"]
+[gd_scene load_steps=5 format=3 uid="uid://drow2c7r2l2uw"]
 
-[ext_resource type="Script" path="res://scenes/goal.gd" id="1_fdrgj"]
-[ext_resource type="Texture2D" uid="uid://0ywf7783k7g5" path="res://graphics/End (Idle).png" id="2_epdsa"]
+[ext_resource type="Script" path="res://scenes/exit.gd" id="1_752dx"]
+[ext_resource type="Texture2D" uid="uid://0ywf7783k7g5" path="res://graphics/End (Idle).png" id="2_uh78i"]
+[ext_resource type="AudioStream" uid="uid://c5bddaccyrdwr" path="res://audio/effects/unlocked.mp3" id="3_4amdj"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_gmvfn"]
 size = Vector2(64, 96)
 
-[node name="Goal" type="Area2D"]
-script = ExtResource("1_fdrgj")
+[node name="Exit" type="Area2D"]
+script = ExtResource("1_752dx")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 position = Vector2(0, -20)
 scale = Vector2(2, 2)
-texture = ExtResource("2_epdsa")
+texture = ExtResource("2_uh78i")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(0, -4)
@@ -38,5 +39,8 @@ offset_top = -44.0
 offset_right = 20.0
 offset_bottom = -21.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
+
+[node name="UnlockedSound" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("3_4amdj")
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]
