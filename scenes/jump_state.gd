@@ -2,19 +2,19 @@ extends State
 
 class_name JumpState
 
-func enter(character) -> void:
+func enter() -> void:
 	character.jump_sound.play()
 	character.velocity.y = JUMP_VELOCITY
 	character.animated_sprite_2d.animation = "jumping"
 
-func physics_process(character: CharacterBody2D, delta: float) -> State:
+func physics_process(delta: float) -> State:
 	character.velocity.y += gravity * delta
 
 	if character.velocity.y > 0:
-		return FallingState.new()
+		return FallingState.new(character)
 
 	if character.is_on_floor():
-		return GroundedState.new()
+		return GroundedState.new(character)
 
 	var direction = Input.get_axis("Left", "Right")
 	if direction:

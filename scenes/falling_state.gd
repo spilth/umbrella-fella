@@ -2,10 +2,10 @@ extends State
 
 class_name FallingState
 
-func enter(character) -> void:
+func enter() -> void:
 	character.animated_sprite_2d.animation = "falling"
 
-func physics_process(character: CharacterBody2D, delta: float) -> State:
+func physics_process(delta: float) -> State:
 	var direction = Input.get_axis("Left", "Right")
 	if direction:
 		character.velocity.x = direction * SPEED
@@ -18,13 +18,13 @@ func physics_process(character: CharacterBody2D, delta: float) -> State:
 	if character.velocity.x < 0:
 		character.animated_sprite_2d.flip_h = true
 
-	character.velocity.y += character.gravity * delta
+	character.velocity.y += gravity * delta
 
 	if Input.is_action_pressed("Open Umbrella") && character.velocity.y > 0:
-		return FloatingState.new()
+		return FloatingState.new(character)
 
 	if character.is_on_floor:
-		return GroundedState.new()
+		return GroundedState.new(character)
 	
 	
 	return null

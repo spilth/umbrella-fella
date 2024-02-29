@@ -6,12 +6,16 @@ const SPEED = 250.0
 const JUMP_VELOCITY = -450.0
 
 var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
+var character: CharacterBody2D
 
-func enter(_character: CharacterBody2D) -> void:
+func _init(c: CharacterBody2D):
+	character = c
+
+func enter() -> void:
 	pass
 
-func physics_process(_character: CharacterBody2D, _delta: float) -> State:
+func physics_process(_delta: float) -> State:
 	return null
 
-func exit(_character: CharacterBody2D) -> void:
+func exit() -> void:
 	pass

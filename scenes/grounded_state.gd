@@ -2,12 +2,12 @@ extends State
 
 class_name GroundedState
 
-func physics_process(character: CharacterBody2D, _delta: float) -> State:
+func physics_process(_delta: float) -> State:
 	if Input.is_action_just_pressed("Jump") and character.is_on_floor():
-		return JumpState.new()
+		return JumpState.new(character)
 
 	if not character.is_on_floor():
-		return FallingState.new()
+		return FallingState.new(character)
 	
 	var direction = Input.get_axis("Left", "Right")
 	if direction:
