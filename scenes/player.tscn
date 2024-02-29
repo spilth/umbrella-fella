@@ -1,13 +1,15 @@
-[gd_scene load_steps=34 format=3 uid="uid://d1kenyvvg6wo2"]
+[gd_scene load_steps=36 format=3 uid="uid://d1kenyvvg6wo2"]
 
 [ext_resource type="Script" path="res://scenes/player.gd" id="1_vgf6t"]
 [ext_resource type="Texture2D" uid="uid://45pr5u6ugh73" path="res://graphics/Block (32x32).png" id="2_j0m0m"]
 [ext_resource type="Texture2D" uid="uid://r7b7nckc1ntf" path="res://graphics/Idle (32x32).png" id="3_85jkk"]
 [ext_resource type="Texture2D" uid="uid://dsikvibrlrhwr" path="res://graphics/Jump (32x32).png" id="3_jvku2"]
+[ext_resource type="Texture2D" uid="uid://c811emqt03g3h" path="res://graphics/Fall (32x32).png" id="3_t85rc"]
 [ext_resource type="Texture2D" uid="uid://dbbqklybdd23n" path="res://graphics/Float (32x32).png" id="4_yn3jv"]
 [ext_resource type="Texture2D" uid="uid://cfckv1p5ee14r" path="res://graphics/Run (32x32).png" id="5_msah8"]
 [ext_resource type="AudioStream" uid="uid://chgivmx3tysgk" path="res://audio/effects/jump.wav" id="7_vqbet"]
 [ext_resource type="AudioStream" uid="uid://dvk2ywd3t03ba" path="res://audio/effects/float.wav" id="8_gq48v"]
+[ext_resource type="Script" path="res://scenes/character_state_machine.gd" id="9_4y7oq"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_1nvyn"]
 radius = 11.0
@@ -117,6 +119,14 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
+"texture": ExtResource("3_t85rc")
+}],
+"loop": true,
+"name": &"falling",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
 "texture": ExtResource("4_yn3jv")
 }],
 "loop": true,
@@ -220,14 +230,16 @@ shape = SubResource("CapsuleShape2D_1nvyn")
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 position = Vector2(0, -2)
 sprite_frames = SubResource("SpriteFrames_8b4j6")
-animation = &"running"
+animation = &"jumping"
 autoplay = "idle"
-frame_progress = 0.99433
+
+[node name="FloatSound" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("8_gq48v")
+bus = &"Effects"
 
 [node name="JumpSound" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("7_vqbet")
 bus = &"Effects"
 
-[node name="FloatSound" type="AudioStreamPlayer2D" parent="."]
-stream = ExtResource("8_gq48v")
-bus = &"Effects"
+[node name="CharacterStateMachine" type="Node" parent="."]
+script = ExtResource("9_4y7oq")
