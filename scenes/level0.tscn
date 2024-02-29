@@ -1,8 +1,7 @@
-[gd_scene load_steps=11 format=3 uid="uid://cmvu86ulamyvd"]
+[gd_scene load_steps=10 format=3 uid="uid://cmvu86ulamyvd"]
 
 [ext_resource type="Texture2D" uid="uid://bymyxl2g1ia2o" path="res://graphics/Terrain (16x16).png" id="1_gsl87"]
 [ext_resource type="PackedScene" uid="uid://d1kenyvvg6wo2" path="res://scenes/player.tscn" id="2_juaa8"]
-[ext_resource type="AudioStream" uid="uid://durfm5mf3juj3" path="res://audio/music/level1.mp3" id="3_nw77t"]
 [ext_resource type="PackedScene" uid="uid://drow2c7r2l2uw" path="res://scenes/exit.tscn" id="4_0kfne"]
 [ext_resource type="PackedScene" uid="uid://dxtmt0ipl4xtw" path="res://scenes/level1.tscn" id="5_8c0u2"]
 [ext_resource type="PackedScene" uid="uid://bb7ccon8eu531" path="res://scenes/coin.tscn" id="6_bppmd"]
@@ -622,18 +621,6 @@ scale = Vector2(2, 2)
 
 [node name="RemoteTransform2D" type="RemoteTransform2D" parent="Player"]
 remote_path = NodePath("../../Camera2D")
-
-[node name="LevelMusic" type="AudioStreamPlayer2D" parent="Player"]
-position = Vector2(54, -2.5)
-scale = Vector2(0.5, 0.5)
-stream = ExtResource("3_nw77t")
-autoplay = true
-bus = &"Music"
-
-[node name="AudioListener2D" type="AudioListener2D" parent="Player"]
-position = Vector2(-32.5, -383)
-scale = Vector2(0.5, 0.5)
-current = true
 
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2(127, 932)

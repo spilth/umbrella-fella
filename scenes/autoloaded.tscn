@@ -1,0 +1,16 @@
+[gd_scene load_steps=4 format=3 uid="uid://td8163a43v3e"]
+
+[ext_resource type="AudioStream" uid="uid://c5hedygfpr5p8" path="res://audio/music/menu.mp3" id="1_8ao3l"]
+[ext_resource type="AudioStream" uid="uid://durfm5mf3juj3" path="res://audio/music/level1.mp3" id="2_8btjh"]
+[ext_resource type="AudioStream" uid="uid://bo8d2k24rra4y" path="res://audio/music/ending.mp3" id="3_ke36i"]
+
+[node name="Autoloaded" type="Node"]
+
+[node name="Menu" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("1_8ao3l")
+
+[node name="Levels" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("2_8btjh")
+
+[node name="Ending" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("3_ke36i")

@@ -1,8 +1,7 @@
-[gd_scene load_steps=9 format=3 uid="uid://xyxckdkgbf66"]
+[gd_scene load_steps=8 format=3 uid="uid://xyxckdkgbf66"]
 
 [ext_resource type="Script" path="res://scenes/menu.gd" id="1_061r3"]
 [ext_resource type="Theme" uid="uid://bo4h3j1vvbdu8" path="res://theme.tres" id="2_g7jr4"]
-[ext_resource type="AudioStream" uid="uid://c5hedygfpr5p8" path="res://audio/music/menu.mp3" id="3_bpixi"]
 
 [sub_resource type="InputEventKey" id="InputEventKey_5h8p8"]
 device = -1
@@ -99,11 +98,6 @@ theme_override_font_sizes/font_size = 32
 action_mode = 0
 shortcut = SubResource("Shortcut_yrsti")
 text = "Quit"
-
-[node name="MainMenuMusic" type="AudioStreamPlayer2D" parent="."]
-stream = ExtResource("3_bpixi")
-autoplay = true
-bus = &"Music"
 
 [connection signal="pressed" from="PlayButton" to="." method="_on_play_button_pressed"]
 [connection signal="pressed" from="QuitButton" to="." method="_on_quit_button_pressed"]
