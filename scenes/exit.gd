@@ -17,8 +17,6 @@ func _on_body_entered(body):
 	if unlocked:
 		if (body.name == "Player"):
 			call_deferred("load_level")
-	else:
-		print("Exit needs to be unlocked!")
 
 func load_level():
 	get_tree().change_scene_to_packed(destination)
