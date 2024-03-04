@@ -10,7 +10,7 @@ config_version=5
 
 [application]
 
-config/name="Umbrella"
+config/name="Umbrella Fella"
 config/version="0.2"
 run/main_scene="res://scenes/menu.tscn"
 config/features=PackedStringArray("4.2", "GL Compatibility")
@@ -25,6 +25,10 @@ Autoloaded="*res://scenes/autoloaded.tscn"
 window/size/mode=2
 window/stretch/mode="canvas_items"
 window/stretch/aspect="expand"
+
+[filesystem]
+
+import/blender/enabled=false
 
 [input]
 
