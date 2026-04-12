@@ -1,46 +1,47 @@
-[gd_scene load_steps=5 format=3 uid="uid://drow2c7r2l2uw"]
+[gd_scene format=3 uid="uid://drow2c7r2l2uw"]
 
-[ext_resource type="Script" path="res://scenes/exit.gd" id="1_752dx"]
+[ext_resource type="Script" uid="uid://dlp26nmauik54" path="res://scenes/exit.gd" id="1_752dx"]
 [ext_resource type="Texture2D" uid="uid://0ywf7783k7g5" path="res://graphics/End (Idle).png" id="2_uh78i"]
 [ext_resource type="AudioStream" uid="uid://c5bddaccyrdwr" path="res://audio/effects/unlocked.mp3" id="3_4amdj"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_gmvfn"]
 size = Vector2(64, 96)
 
-[node name="Exit" type="Area2D"]
+[node name="Exit" type="Area2D" unique_id=1834716288]
 script = ExtResource("1_752dx")
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1298219346]
 position = Vector2(0, -20)
 scale = Vector2(2, 2)
 texture = ExtResource("2_uh78i")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1633299822]
 position = Vector2(0, -4)
 shape = SubResource("RectangleShape2D_gmvfn")
 
-[node name="GreenLight" type="ColorRect" parent="."]
+[node name="GreenLight" type="ColorRect" parent="." unique_id=1200940101]
 offset_left = -32.0
 offset_top = -52.0
 offset_right = 32.0
 offset_bottom = 44.0
 color = Color(0, 1, 0, 1)
 
-[node name="RedLight" type="ColorRect" parent="."]
+[node name="RedLight" type="ColorRect" parent="." unique_id=1827370699]
 offset_left = -32.0
 offset_top = -52.0
 offset_right = 32.0
 offset_bottom = 44.0
 color = Color(1, 0, 0, 1)
 
-[node name="ProgressLabel" type="Label" parent="."]
+[node name="ProgressLabel" type="Label" parent="." unique_id=1346879024]
 offset_left = -20.0
 offset_top = -44.0
 offset_right = 20.0
 offset_bottom = -21.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
+horizontal_alignment = 1
 
-[node name="UnlockedSound" type="AudioStreamPlayer2D" parent="."]
+[node name="UnlockedSound" type="AudioStreamPlayer2D" parent="." unique_id=898650737]
 stream = ExtResource("3_4amdj")
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]

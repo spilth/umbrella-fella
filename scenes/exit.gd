@@ -2,11 +2,12 @@ extends Area2D
 
 @export var destination : PackedScene
 @export var coinsRequired : int = 10
+
 @onready var red_light = $RedLight
 @onready var progress_label = $ProgressLabel
 @onready var unlocked_sound = $UnlockedSound
 
-var unlocked = false
+var locked = true
 var coins = 0
 
 func _ready():
@@ -14,7 +15,7 @@ func _ready():
 	pass
 	
 func _on_body_entered(body):
-	if unlocked:
+	if !locked:
 		if (body.name == "Player"):
 			call_deferred("load_level")
 
@@ -25,7 +26,7 @@ func insert_coin():
 	coins = coins + 1
 	progress_label.text = str(coins, "/", coinsRequired)
 	
-	if coins >= coinsRequired && !unlocked:
-		unlocked = true
+	if coins >= coinsRequired && locked:
+		locked = false
 		unlocked_sound.play()
 		red_light.visible = false
