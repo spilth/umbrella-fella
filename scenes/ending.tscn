@@ -1,6 +1,6 @@
-[gd_scene load_steps=6 format=3 uid="uid://buaif1wcbhyvs"]
+[gd_scene format=3 uid="uid://buaif1wcbhyvs"]
 
-[ext_resource type="Script" path="res://scenes/ending.gd" id="1_l443l"]
+[ext_resource type="Script" uid="uid://dhwrqy8lqino7" path="res://scenes/ending.gd" id="1_l443l"]
 
 [sub_resource type="InputEventKey" id="InputEventKey_urhve"]
 device = -1
@@ -16,10 +16,10 @@ keycode = 4194305
 [sub_resource type="Shortcut" id="Shortcut_k88md"]
 events = [SubResource("InputEventKey_rfntr")]
 
-[node name="Node" type="Node"]
+[node name="Node" type="Node" unique_id=24090871]
 script = ExtResource("1_l443l")
 
-[node name="BackgroundColor" type="ColorRect" parent="."]
+[node name="BackgroundColor" type="ColorRect" parent="." unique_id=1856982132]
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
@@ -27,7 +27,7 @@ grow_horizontal = 2
 grow_vertical = 2
 color = Color(1, 0.431373, 0.266667, 1)
 
-[node name="YouHaveWonLabel" type="RichTextLabel" parent="."]
+[node name="YouHaveWonLabel" type="RichTextLabel" parent="." unique_id=1341381779]
 offset_left = 123.0
 offset_top = 70.0
 offset_right = 1029.0
@@ -35,7 +35,7 @@ offset_bottom = 248.0
 theme_override_font_sizes/normal_font_size = 128
 text = "You have won!"
 
-[node name="PlayAgainButton" type="Button" parent="."]
+[node name="PlayAgainButton" type="Button" parent="." unique_id=896266346]
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
@@ -53,7 +53,7 @@ action_mode = 0
 shortcut = SubResource("Shortcut_qkd8h")
 text = "Play again!"
 
-[node name="MainMenuButton" type="Button" parent="."]
+[node name="MainMenuButton" type="Button" parent="." unique_id=1602321403]
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
