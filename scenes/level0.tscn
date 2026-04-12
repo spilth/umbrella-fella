@@ -3,7 +3,7 @@
 [ext_resource type="Texture2D" uid="uid://bymyxl2g1ia2o" path="res://graphics/Terrain (16x16).png" id="1_gsl87"]
 [ext_resource type="PackedScene" uid="uid://d1kenyvvg6wo2" path="res://scenes/player.tscn" id="2_juaa8"]
 [ext_resource type="PackedScene" uid="uid://drow2c7r2l2uw" path="res://scenes/exit.tscn" id="4_0kfne"]
-[ext_resource type="PackedScene" uid="uid://dxtmt0ipl4xtw" path="res://scenes/level1.tscn" id="5_8c0u2"]
+[ext_resource type="PackedScene" uid="uid://bx66krbqyphnq" path="res://scenes/level1.tscn" id="5_8c0u2"]
 [ext_resource type="PackedScene" uid="uid://bb7ccon8eu531" path="res://scenes/coin.tscn" id="6_bppmd"]
 
 [sub_resource type="TileMapPattern" id="TileMapPattern_r740i"]
