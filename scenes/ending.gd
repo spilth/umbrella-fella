@@ -1,15 +1,31 @@
 extends Node
 
+@export var play_again_button:Button
+
 func _ready():
+	play_again_button.grab_focus()
 	Autoloaded.get_node("Levels").stop()
 	Autoloaded.get_node("Ending").play()
 
+func _process(_delta: float) -> void:
+	if Input.is_action_just_pressed("ui_accept"):
+		play_again()
+	
+	if Input.is_action_just_pressed("ui_cancel"):
+		main_menu()
+
 func _on_play_again_pressed():
+	play_again()
+
+func _on_main_menu_pressed():
+	main_menu()
+
+func play_again():
 	Autoloaded.get_node("Ending").stop()
 	Autoloaded.get_node("Levels").play()
 	get_tree().change_scene_to_file("res://scenes/level0.tscn")
 
-func _on_main_menu_pressed():
+func main_menu():
 	Autoloaded.get_node("Ending").stop()
 	Autoloaded.get_node("Menu").play()
 	get_tree().change_scene_to_file("res://scenes/menu.tscn")

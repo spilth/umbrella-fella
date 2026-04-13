@@ -1,6 +1,8 @@
 [gd_scene format=3 uid="uid://buaif1wcbhyvs"]
 
 [ext_resource type="Script" uid="uid://dhwrqy8lqino7" path="res://scenes/ending.gd" id="1_l443l"]
+[ext_resource type="Texture2D" uid="uid://xsjivni51rdd" path="res://graphics/controller_buttons/a.png" id="2_2x1jc"]
+[ext_resource type="Texture2D" uid="uid://ckhbo1bbgb4vo" path="res://graphics/controller_buttons/b.png" id="3_nfmnx"]
 
 [sub_resource type="InputEventKey" id="InputEventKey_urhve"]
 device = -1
@@ -16,8 +18,9 @@ keycode = 4194305
 [sub_resource type="Shortcut" id="Shortcut_k88md"]
 events = [SubResource("InputEventKey_rfntr")]
 
-[node name="Node" type="Node" unique_id=24090871]
+[node name="Node" type="Node" unique_id=24090871 node_paths=PackedStringArray("play_again_button")]
 script = ExtResource("1_l443l")
+play_again_button = NodePath("PlayAgainButton")
 
 [node name="BackgroundColor" type="ColorRect" parent="." unique_id=1856982132]
 anchors_preset = 15
@@ -28,12 +31,12 @@ grow_vertical = 2
 color = Color(1, 0.431373, 0.266667, 1)
 
 [node name="YouHaveWonLabel" type="RichTextLabel" parent="." unique_id=1341381779]
-offset_left = 123.0
-offset_top = 70.0
-offset_right = 1029.0
-offset_bottom = 248.0
+offset_top = 40.0
+offset_right = 1152.0
+offset_bottom = 216.0
 theme_override_font_sizes/normal_font_size = 128
 text = "You have won!"
+horizontal_alignment = 1
 
 [node name="PlayAgainButton" type="Button" parent="." unique_id=896266346]
 anchors_preset = 8
@@ -41,17 +44,22 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -141.5
-offset_top = -44.0
-offset_right = 141.5
-offset_bottom = 44.0
+offset_left = -128.0
+offset_top = -68.0
+offset_right = 128.0
+offset_bottom = -12.0
 grow_horizontal = 2
 grow_vertical = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
+focus_next = NodePath("../MainMenuButton")
+focus_previous = NodePath("../MainMenuButton")
 action_mode = 0
 shortcut = SubResource("Shortcut_qkd8h")
 text = "Play again!"
+icon = ExtResource("2_2x1jc")
+icon_alignment = 2
+expand_icon = true
 
 [node name="MainMenuButton" type="Button" parent="." unique_id=1602321403]
 anchors_preset = 8
@@ -59,18 +67,23 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -141.5
-offset_top = 66.0
-offset_right = 141.5
-offset_bottom = 154.0
+offset_left = -128.0
+offset_top = -4.0
+offset_right = 128.0
+offset_bottom = 52.0
 grow_horizontal = 2
 grow_vertical = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
+focus_next = NodePath("../PlayAgainButton")
+focus_previous = NodePath("../PlayAgainButton")
 action_mode = 0
 shortcut = SubResource("Shortcut_k88md")
 text = "Main Menu
 "
+icon = ExtResource("3_nfmnx")
+icon_alignment = 2
+expand_icon = true
 
 [connection signal="pressed" from="PlayAgainButton" to="." method="_on_play_again_pressed"]
 [connection signal="pressed" from="MainMenuButton" to="." method="_on_main_menu_pressed"]
