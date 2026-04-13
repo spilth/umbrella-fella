@@ -19,14 +19,7 @@ texture = ExtResource("2_uh78i")
 position = Vector2(0, -4)
 shape = SubResource("RectangleShape2D_gmvfn")
 
-[node name="GreenLight" type="ColorRect" parent="." unique_id=1200940101]
-offset_left = -32.0
-offset_top = -52.0
-offset_right = 32.0
-offset_bottom = 44.0
-color = Color(0, 1, 0, 1)
-
-[node name="RedLight" type="ColorRect" parent="." unique_id=1827370699]
+[node name="Light" type="ColorRect" parent="." unique_id=1064947962]
 offset_left = -32.0
 offset_top = -52.0
 offset_right = 32.0

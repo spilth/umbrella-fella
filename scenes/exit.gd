@@ -4,8 +4,10 @@ extends Area2D
 
 @export var destination : PackedScene
 @export var coinsRequired : int = 10
+@export var lockedColor: Color = Color.RED
+@export var unlockedColor: Color = Color.GREEN
 
-@onready var red_light = $RedLight
+@onready var light = $Light
 @onready var progress_label = $ProgressLabel
 @onready var unlocked_sound = $UnlockedSound
 
@@ -13,6 +15,7 @@ var locked = true
 var coins = 0
 
 func _ready():
+	light.color = lockedColor
 	progress_label.text = str(coins, "/", coinsRequired)
 	pass
 	
@@ -30,5 +33,5 @@ func insert_coin():
 	
 	if coins >= coinsRequired && locked:
 		locked = false
+		light.color = unlockedColor
 		unlocked_sound.play()
-		red_light.visible = false
