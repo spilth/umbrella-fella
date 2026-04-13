@@ -17,12 +17,13 @@ var coins = 0
 func _ready():
 	light.color = lockedColor
 	progress_label.text = str(coins, "/", coinsRequired)
-	pass
-	
+
 func _on_body_entered(body):
-	if !locked:
-		if (body.name == "Player"):
-			call_deferred("load_level")
+	if locked:
+		return
+	
+	if (body.name == "Player"):
+		call_deferred("load_level")
 
 func load_level():
 	get_tree().change_scene_to_packed(destination)
