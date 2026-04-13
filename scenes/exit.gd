@@ -1,3 +1,5 @@
+class_name Exit
+
 extends Area2D
 
 @export var destination : PackedScene

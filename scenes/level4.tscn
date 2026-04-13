@@ -49,50 +49,66 @@ editor_draw_limits = true
 
 [node name="Coins" type="Node" parent="." unique_id=414270040]
 
-[node name="Coin" parent="Coins" unique_id=140918071 instance=ExtResource("7_5g2mm")]
+[node name="Coin" parent="Coins" unique_id=140918071 node_paths=PackedStringArray("exit") instance=ExtResource("7_5g2mm")]
 position = Vector2(337, 679)
+exit = NodePath("../../Exit")
 
-[node name="Coin2" parent="Coins" unique_id=524738631 instance=ExtResource("7_5g2mm")]
+[node name="Coin2" parent="Coins" unique_id=524738631 node_paths=PackedStringArray("exit") instance=ExtResource("7_5g2mm")]
 position = Vector2(634, 680)
+exit = NodePath("../../Exit")
 
-[node name="Coin3" parent="Coins" unique_id=34444548 instance=ExtResource("7_5g2mm")]
+[node name="Coin3" parent="Coins" unique_id=34444548 node_paths=PackedStringArray("exit") instance=ExtResource("7_5g2mm")]
 position = Vector2(321, 576)
+exit = NodePath("../../Exit")
 
-[node name="Coin8" parent="Coins" unique_id=896593515 instance=ExtResource("7_5g2mm")]
+[node name="Coin8" parent="Coins" unique_id=896593515 node_paths=PackedStringArray("exit") instance=ExtResource("7_5g2mm")]
 position = Vector2(383, 561)
+exit = NodePath("../../Exit")
 
-[node name="Coin9" parent="Coins" unique_id=1134853445 instance=ExtResource("7_5g2mm")]
+[node name="Coin9" parent="Coins" unique_id=1134853445 node_paths=PackedStringArray("exit") instance=ExtResource("7_5g2mm")]
 position = Vector2(512, 538)
+exit = NodePath("../../Exit")
 
-[node name="Coin13" parent="Coins" unique_id=607627944 instance=ExtResource("7_5g2mm")]
+[node name="Coin13" parent="Coins" unique_id=607627944 node_paths=PackedStringArray("exit") instance=ExtResource("7_5g2mm")]
 position = Vector2(448, 448)
+exit = NodePath("../../Exit")
 
-[node name="Coin14" parent="Coins" unique_id=1939835740 instance=ExtResource("7_5g2mm")]
+[node name="Coin14" parent="Coins" unique_id=1939835740 node_paths=PackedStringArray("exit") instance=ExtResource("7_5g2mm")]
 position = Vector2(577, 384)
+exit = NodePath("../../Exit")
 
-[node name="Coin15" parent="Coins" unique_id=211693567 instance=ExtResource("7_5g2mm")]
+[node name="Coin15" parent="Coins" unique_id=211693567 node_paths=PackedStringArray("exit") instance=ExtResource("7_5g2mm")]
 position = Vector2(448, 321)
+exit = NodePath("../../Exit")
 
-[node name="Coin16" parent="Coins" unique_id=1530894803 instance=ExtResource("7_5g2mm")]
+[node name="Coin16" parent="Coins" unique_id=1530894803 node_paths=PackedStringArray("exit") instance=ExtResource("7_5g2mm")]
 position = Vector2(576, 257)
+exit = NodePath("../../Exit")
 
-[node name="Coin17" parent="Coins" unique_id=1007754956 instance=ExtResource("7_5g2mm")]
+[node name="Coin17" parent="Coins" unique_id=1007754956 node_paths=PackedStringArray("exit") instance=ExtResource("7_5g2mm")]
 position = Vector2(573, 101)
+exit = NodePath("../../Exit")
 
-[node name="Coin18" parent="Coins" unique_id=1427790664 instance=ExtResource("7_5g2mm")]
+[node name="Coin18" parent="Coins" unique_id=1427790664 node_paths=PackedStringArray("exit") instance=ExtResource("7_5g2mm")]
 position = Vector2(640, 129)
+exit = NodePath("../../Exit")
 
-[node name="Coin19" parent="Coins" unique_id=1588882081 instance=ExtResource("7_5g2mm")]
+[node name="Coin19" parent="Coins" unique_id=1588882081 node_paths=PackedStringArray("exit") instance=ExtResource("7_5g2mm")]
 position = Vector2(703, 161)
+exit = NodePath("../../Exit")
 
-[node name="Coin20" parent="Coins" unique_id=273020497 instance=ExtResource("7_5g2mm")]
+[node name="Coin20" parent="Coins" unique_id=273020497 node_paths=PackedStringArray("exit") instance=ExtResource("7_5g2mm")]
 position = Vector2(769, 192)
+exit = NodePath("../../Exit")
 
-[node name="Coin11" parent="Coins" unique_id=1467283374 instance=ExtResource("7_5g2mm")]
+[node name="Coin11" parent="Coins" unique_id=1467283374 node_paths=PackedStringArray("exit") instance=ExtResource("7_5g2mm")]
 position = Vector2(577, 526)
+exit = NodePath("../../Exit")
 
-[node name="Coin12" parent="Coins" unique_id=1860977470 instance=ExtResource("7_5g2mm")]
+[node name="Coin12" parent="Coins" unique_id=1860977470 node_paths=PackedStringArray("exit") instance=ExtResource("7_5g2mm")]
 position = Vector2(640, 511)
+exit = NodePath("../../Exit")
 
-[node name="Coin10" parent="Coins" unique_id=1078237259 instance=ExtResource("7_5g2mm")]
+[node name="Coin10" parent="Coins" unique_id=1078237259 node_paths=PackedStringArray("exit") instance=ExtResource("7_5g2mm")]
 position = Vector2(447, 551)
+exit = NodePath("../../Exit")

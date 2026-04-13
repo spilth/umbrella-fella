@@ -49,11 +49,14 @@ editor_draw_limits = true
 
 [node name="Coins" type="Node" parent="." unique_id=440191559]
 
-[node name="Coin" parent="Coins" unique_id=342760762 instance=ExtResource("6_bppmd")]
+[node name="Coin" parent="Coins" unique_id=342760762 node_paths=PackedStringArray("exit") instance=ExtResource("6_bppmd")]
 position = Vector2(511, 929)
+exit = NodePath("../../Exit")
 
-[node name="Coin2" parent="Coins" unique_id=1070733716 instance=ExtResource("6_bppmd")]
+[node name="Coin2" parent="Coins" unique_id=1070733716 node_paths=PackedStringArray("exit") instance=ExtResource("6_bppmd")]
 position = Vector2(640, 929)
+exit = NodePath("../../Exit")
 
-[node name="Coin3" parent="Coins" unique_id=1516061605 instance=ExtResource("6_bppmd")]
+[node name="Coin3" parent="Coins" unique_id=1516061605 node_paths=PackedStringArray("exit") instance=ExtResource("6_bppmd")]
 position = Vector2(383, 930)
+exit = NodePath("../../Exit")

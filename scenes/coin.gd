@@ -1,10 +1,10 @@
 extends Area2D
 
+@export var exit: Exit
+
 @onready var audio_stream_player_2d = $AudioStreamPlayer2D
 @onready var sprite_2d = $Sprite2D
 @onready var collision_shape_2d = $CollisionShape2D
-
-@onready var exit = %Exit
 
 func _on_body_entered(body):
 	if (body.name == "Player"):
