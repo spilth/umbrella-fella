@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://drow2c7r2l2uw"]
 
-[ext_resource type="Script" uid="uid://dlp26nmauik54" path="res://scenes/exit.gd" id="1_752dx"]
+[ext_resource type="Script" uid="uid://dlp26nmauik54" path="res://scenes/objects/exit.gd" id="1_752dx"]
 [ext_resource type="Texture2D" uid="uid://0ywf7783k7g5" path="res://graphics/End (Idle).png" id="2_uh78i"]
 [ext_resource type="AudioStream" uid="uid://c5bddaccyrdwr" path="res://audio/effects/unlocked.mp3" id="3_4amdj"]
 

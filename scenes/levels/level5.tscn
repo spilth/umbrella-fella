@@ -1,10 +1,10 @@
 [gd_scene format=4 uid="uid://41mb3sswdrhw"]
 
 [ext_resource type="TileSet" uid="uid://bppcbwhxoh26h" path="res://tile_set.tres" id="1_8s0yo"]
-[ext_resource type="PackedScene" uid="uid://d1kenyvvg6wo2" path="res://scenes/player.tscn" id="3_q6eff"]
-[ext_resource type="PackedScene" uid="uid://drow2c7r2l2uw" path="res://scenes/exit.tscn" id="5_gin1w"]
+[ext_resource type="PackedScene" uid="uid://d1kenyvvg6wo2" path="res://scenes/player/player.tscn" id="3_q6eff"]
+[ext_resource type="PackedScene" uid="uid://drow2c7r2l2uw" path="res://scenes/objects/exit.tscn" id="5_gin1w"]
 [ext_resource type="PackedScene" uid="uid://buaif1wcbhyvs" path="res://scenes/ending.tscn" id="6_61333"]
-[ext_resource type="PackedScene" uid="uid://bb7ccon8eu531" path="res://scenes/coin.tscn" id="7_a82yy"]
+[ext_resource type="PackedScene" uid="uid://bb7ccon8eu531" path="res://scenes/objects/coin.tscn" id="7_a82yy"]
 
 [node name="Node" type="Node" unique_id=1936648356]
 
