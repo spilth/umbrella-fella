@@ -6,13 +6,6 @@ func _ready():
 	play_button.grab_focus()
 	Autoloaded.get_node("Menu").play()
 
-func _process(_delta):
-	if Input.is_action_just_pressed("ui_accept"):
-		start_game()
-		
-	if Input.is_action_just_pressed("ui_cancel"):
-		quit_game()
-
 func _on_play_button_pressed():
 	start_game()
 

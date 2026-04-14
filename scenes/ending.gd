@@ -7,13 +7,6 @@ func _ready():
 	Autoloaded.get_node("Levels").stop()
 	Autoloaded.get_node("Ending").play()
 
-func _process(_delta: float) -> void:
-	if Input.is_action_just_pressed("ui_accept"):
-		play_again()
-	
-	if Input.is_action_just_pressed("ui_cancel"):
-		main_menu()
-
 func _on_play_again_pressed():
 	play_again()
 
