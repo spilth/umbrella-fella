@@ -15,7 +15,7 @@ func _on_quit_button_pressed():
 func start_game():
 	Autoloaded.get_node("Menu").stop()
 	Autoloaded.get_node("Levels").play()
-	get_tree().change_scene_to_file("res://scenes/level0.tscn")
+	get_tree().change_scene_to_file("res://scenes/levels/level0.tscn")
 
 func quit_game():
 	get_tree().quit()

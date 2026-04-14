@@ -16,7 +16,7 @@ func _on_main_menu_pressed():
 func play_again():
 	Autoloaded.get_node("Ending").stop()
 	Autoloaded.get_node("Levels").play()
-	get_tree().change_scene_to_file("res://scenes/level0.tscn")
+	get_tree().change_scene_to_file("res://scenes/levels/level0.tscn")
 
 func main_menu():
 	Autoloaded.get_node("Ending").stop()
