@@ -220,22 +220,22 @@ animations = [{
 "speed": 20.0
 }]
 
-[node name="CharacterBody2D" type="CharacterBody2D"]
+[node name="CharacterBody2D" type="CharacterBody2D" unique_id=241286590]
 script = ExtResource("1_vgf6t")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1217251733]
 shape = SubResource("CapsuleShape2D_1nvyn")
 
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=699622750]
 position = Vector2(0, -2)
 sprite_frames = SubResource("SpriteFrames_8b4j6")
 animation = &"jumping"
 autoplay = "idle"
 
-[node name="FloatSound" type="AudioStreamPlayer2D" parent="."]
+[node name="FloatSound" type="AudioStreamPlayer2D" parent="." unique_id=1015901330]
 stream = ExtResource("8_gq48v")
 bus = &"Effects"
 
-[node name="JumpSound" type="AudioStreamPlayer2D" parent="."]
+[node name="JumpSound" type="AudioStreamPlayer2D" parent="." unique_id=124114188]
 stream = ExtResource("7_vqbet")
 bus = &"Effects"

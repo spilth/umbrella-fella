@@ -2,8 +2,8 @@ extends Node
 
 class_name State
 
-const SPEED = 250.0
-const JUMP_VELOCITY = -450.0
+const SPEED = 125.0
+const JUMP_VELOCITY = -225.0
 
 var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
 var character: CharacterBody2D
