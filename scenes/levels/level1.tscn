@@ -35,7 +35,7 @@ position = Vector2(32, 304)
 remote_path = NodePath("../../Camera2D")
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=1158989462]
-position = Vector2(48, 304)
+position = Vector2(32, 304)
 process_callback = 0
 limit_left = 0
 limit_top = 0
@@ -50,25 +50,20 @@ editor_draw_limits = true
 
 [node name="Coin" parent="Coins" unique_id=342760762 node_paths=PackedStringArray("exit") instance=ExtResource("5_jarnt")]
 position = Vector2(232, 208)
-scale = Vector2(0.5, 0.5)
 exit = NodePath("../../Exit")
 
 [node name="Coin2" parent="Coins" unique_id=1070733716 node_paths=PackedStringArray("exit") instance=ExtResource("5_jarnt")]
 position = Vector2(280, 160)
-scale = Vector2(0.5, 0.5)
 exit = NodePath("../../Exit")
 
 [node name="Coin3" parent="Coins" unique_id=1516061605 node_paths=PackedStringArray("exit") instance=ExtResource("5_jarnt")]
 position = Vector2(184, 256)
-scale = Vector2(0.5, 0.5)
 exit = NodePath("../../Exit")
 
 [node name="Coin4" parent="Coins" unique_id=1110166728 node_paths=PackedStringArray("exit") instance=ExtResource("5_jarnt")]
 position = Vector2(328, 208)
-scale = Vector2(0.5, 0.5)
 exit = NodePath("../../Exit")
 
 [node name="Coin5" parent="Coins" unique_id=200320721 node_paths=PackedStringArray("exit") instance=ExtResource("5_jarnt")]
 position = Vector2(376, 256)
-scale = Vector2(0.5, 0.5)
 exit = NodePath("../../Exit")

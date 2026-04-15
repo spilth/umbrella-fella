@@ -48,45 +48,36 @@ editor_draw_limits = true
 
 [node name="Coin" parent="Coins" unique_id=587054539 node_paths=PackedStringArray("exit") instance=ExtResource("7_a82yy")]
 position = Vector2(104, 480)
-scale = Vector2(0.5, 0.5)
 exit = NodePath("../../Exit")
 
 [node name="Coin9" parent="Coins" unique_id=1869383335 node_paths=PackedStringArray("exit") instance=ExtResource("7_a82yy")]
 position = Vector2(40, 384)
-scale = Vector2(0.5, 0.5)
 exit = NodePath("../../Exit")
 
 [node name="Coin2" parent="Coins" unique_id=612086149 node_paths=PackedStringArray("exit") instance=ExtResource("7_a82yy")]
 position = Vector2(521, 384)
-scale = Vector2(0.5, 0.5)
 exit = NodePath("../../Exit")
 
 [node name="Coin3" parent="Coins" unique_id=955963707 node_paths=PackedStringArray("exit") instance=ExtResource("7_a82yy")]
 position = Vector2(296, 384)
-scale = Vector2(0.5, 0.5)
 exit = NodePath("../../Exit")
 
 [node name="Coin4" parent="Coins" unique_id=897217737 node_paths=PackedStringArray("exit") instance=ExtResource("7_a82yy")]
 position = Vector2(472, 336)
-scale = Vector2(0.5, 0.5)
 exit = NodePath("../../Exit")
 
 [node name="Coin5" parent="Coins" unique_id=2000247392 node_paths=PackedStringArray("exit") instance=ExtResource("7_a82yy")]
 position = Vector2(296, 192)
-scale = Vector2(0.5, 0.5)
 exit = NodePath("../../Exit")
 
 [node name="Coin6" parent="Coins" unique_id=1520303232 node_paths=PackedStringArray("exit") instance=ExtResource("7_a82yy")]
 position = Vector2(296, 240)
-scale = Vector2(0.5, 0.5)
 exit = NodePath("../../Exit")
 
 [node name="Coin7" parent="Coins" unique_id=1338565465 node_paths=PackedStringArray("exit") instance=ExtResource("7_a82yy")]
 position = Vector2(296, 320)
-scale = Vector2(0.5, 0.5)
 exit = NodePath("../../Exit")
 
 [node name="Coin8" parent="Coins" unique_id=517283447 node_paths=PackedStringArray("exit") instance=ExtResource("7_a82yy")]
 position = Vector2(296, 352)
-scale = Vector2(0.5, 0.5)
 exit = NodePath("../../Exit")
