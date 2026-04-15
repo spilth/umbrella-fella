@@ -21,8 +21,7 @@ tile_set = ExtResource("1_7uttt")
 
 [node name="Exit" parent="." unique_id=993344912 instance=ExtResource("2_ab2x6")]
 unique_name_in_owner = true
-position = Vector2(538, 202)
-scale = Vector2(0.5, 0.5)
+position = Vector2(496, 224)
 destination = ExtResource("3_hifb5")
 coinsRequired = 8
 
