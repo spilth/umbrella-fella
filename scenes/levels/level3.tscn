@@ -23,7 +23,6 @@ tile_set = ExtResource("1_7uttt")
 unique_name_in_owner = true
 position = Vector2(496, 224)
 destination = ExtResource("3_hifb5")
-coinsRequired = 8
 
 [node name="Player" parent="." unique_id=49789587 instance=ExtResource("4_v0yx1")]
 position = Vector2(48, 304)

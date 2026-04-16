@@ -3,7 +3,6 @@ class_name Exit
 extends Area2D
 
 @export var destination : PackedScene
-@export var coinsRequired : int = 10
 @export var lockedColor: Color = Color.RED
 @export var unlockedColor: Color = Color.GREEN
 
@@ -13,10 +12,11 @@ extends Area2D
 
 var locked = true
 var coins = 0
+var required = 0
 
 func _ready():
 	light.color = lockedColor
-	progress_label.text = str(coins, "/", coinsRequired)
+	progress_label.text = str(coins, "/", required)
 
 func _on_body_entered(body):
 	if locked:
@@ -28,11 +28,18 @@ func _on_body_entered(body):
 func load_level():
 	get_tree().change_scene_to_packed(destination)
 
+func register_coin(coin: Coin):
+	required = required + 1
+	update_label()
+
 func insert_coin():
 	coins = coins + 1
-	progress_label.text = str(coins, "/", coinsRequired)
+	update_label()
 	
-	if coins >= coinsRequired && locked:
+	if coins >= required && locked:
 		locked = false
 		light.color = unlockedColor
 		unlocked_sound.play()
+
+func update_label():
+	progress_label.text = str(coins, "/", required)
