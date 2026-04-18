@@ -1,15 +1,15 @@
-class_name Coin
+class_name GateCoin
 
 extends Area2D
 
-@export var exit: Exit
+@export var gate: Gate
 
 @onready var audio_stream_player_2d: AudioStreamPlayer2D = $AudioStreamPlayer2D
 @onready var sprite_2d: AnimatedSprite2D = $AnimatedSprite2D
 @onready var collision_shape_2d: CollisionShape2D = $CollisionShape2D
 
 func _ready():
-	exit.register_coin(self)
+	gate.register_coin(self)
 
 func _on_body_entered(body):
 	if (body.name == "Player"):
@@ -19,7 +19,7 @@ func _on_body_entered(body):
 func pickup():
 	sprite_2d.visible = false
 	collision_shape_2d.disabled = true
-	exit.insert_coin()
+	gate.insert_coin()
 
 func _on_audio_stream_player_2d_finished():
 	queue_free()

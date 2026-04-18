@@ -2,7 +2,7 @@
 
 [ext_resource type="TileSet" uid="uid://bppcbwhxoh26h" path="res://tile_set.tres" id="1_7uttt"]
 [ext_resource type="PackedScene" uid="uid://drow2c7r2l2uw" path="res://scenes/objects/exit.tscn" id="2_ab2x6"]
-[ext_resource type="PackedScene" uid="uid://dxtmt0ipl4xtw" path="res://scenes/levels/level4.tscn" id="3_hifb5"]
+[ext_resource type="PackedScene" uid="uid://dq0xkf1vt7lc0" path="res://scenes/levels/level4.tscn" id="3_f5jb5"]
 [ext_resource type="PackedScene" uid="uid://d1kenyvvg6wo2" path="res://scenes/player/player.tscn" id="4_v0yx1"]
 [ext_resource type="PackedScene" uid="uid://bb7ccon8eu531" path="res://scenes/objects/coin.tscn" id="5_pq6ge"]
 
@@ -22,7 +22,7 @@ tile_set = ExtResource("1_7uttt")
 [node name="Exit" parent="." unique_id=993344912 instance=ExtResource("2_ab2x6")]
 unique_name_in_owner = true
 position = Vector2(496, 224)
-destination = ExtResource("3_hifb5")
+destination = ExtResource("3_f5jb5")
 
 [node name="Player" parent="." unique_id=49789587 instance=ExtResource("4_v0yx1")]
 position = Vector2(48, 304)

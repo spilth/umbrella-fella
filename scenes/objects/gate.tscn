@@ -1,0 +1,37 @@
+[gd_scene format=3 uid="uid://cjbffwi61ktp4"]
+
+[ext_resource type="Script" uid="uid://vr2xn24cglf2" path="res://scenes/objects/gate.gd" id="1_q0w5n"]
+[ext_resource type="AudioStream" uid="uid://c5bddaccyrdwr" path="res://audio/effects/unlocked.mp3" id="2_33swo"]
+[ext_resource type="SpriteFrames" uid="uid://dtwcmmmwiq77k" path="res://animations/silver_coin.tres" id="3_sb1ok"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_r1vsk"]
+size = Vector2(32, 32)
+
+[node name="Gate" type="StaticBody2D" unique_id=522165372]
+script = ExtResource("1_q0w5n")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1744473119]
+position = Vector2(16, -16)
+shape = SubResource("RectangleShape2D_r1vsk")
+
+[node name="Light" type="ColorRect" parent="." unique_id=901535669]
+offset_top = -32.0
+offset_right = 32.0
+color = Color(1, 0, 0, 1)
+
+[node name="ProgressLabel" type="Label" parent="." unique_id=130973688]
+offset_top = -37.0
+offset_right = 32.0
+offset_bottom = -14.0
+text = "42"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="UnlockedSound" type="AudioStreamPlayer2D" parent="." unique_id=53451715]
+stream = ExtResource("2_33swo")
+pitch_scale = 0.8
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1068096890]
+position = Vector2(16, -10)
+scale = Vector2(0.5, 0.5)
+sprite_frames = ExtResource("3_sb1ok")

@@ -3,6 +3,7 @@
 [ext_resource type="Script" uid="uid://dlp26nmauik54" path="res://scenes/objects/exit.gd" id="1_752dx"]
 [ext_resource type="Texture2D" uid="uid://0ywf7783k7g5" path="res://graphics/End (Idle).png" id="2_uh78i"]
 [ext_resource type="AudioStream" uid="uid://c5bddaccyrdwr" path="res://audio/effects/unlocked.mp3" id="3_4amdj"]
+[ext_resource type="SpriteFrames" uid="uid://sk5q1870y7gm" path="res://animations/gold_coin.tres" id="4_3ibsk"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_gmvfn"]
 size = Vector2(32, 48)
@@ -24,13 +25,17 @@ offset_top = -48.0
 offset_right = 48.0
 color = Color(1, 0, 0, 1)
 
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=393775786]
+position = Vector2(32, -24)
+scale = Vector2(0.5, 0.5)
+sprite_frames = ExtResource("4_3ibsk")
+
 [node name="ProgressLabel" type="Label" parent="." unique_id=1346879024]
 offset_left = 16.0
-offset_top = -48.0
+offset_top = -64.0
 offset_right = 48.0
-theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_font_sizes/font_size = 12
-text = "0/0"
+offset_bottom = -16.0
+text = "42"
 horizontal_alignment = 1
 vertical_alignment = 1
 

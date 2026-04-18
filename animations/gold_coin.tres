@@ -1,0 +1,46 @@
+[gd_resource type="SpriteFrames" format=3 uid="uid://sk5q1870y7gm"]
+
+[ext_resource type="Texture2D" uid="uid://dsubel05riq00" path="res://graphics/MonedaD.png" id="1_h7uxg"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_v6le6"]
+atlas = ExtResource("1_h7uxg")
+region = Rect2(0, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_28h24"]
+atlas = ExtResource("1_h7uxg")
+region = Rect2(16, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gcuwf"]
+atlas = ExtResource("1_h7uxg")
+region = Rect2(32, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_86amp"]
+atlas = ExtResource("1_h7uxg")
+region = Rect2(48, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fwtuy"]
+atlas = ExtResource("1_h7uxg")
+region = Rect2(64, 0, 16, 16)
+
+[resource]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_v6le6")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_28h24")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_gcuwf")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_86amp")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_fwtuy")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]

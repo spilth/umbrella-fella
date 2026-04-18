@@ -1,12 +1,12 @@
-class_name Exit
+class_name Gate
 
-extends Area2D
+extends StaticBody2D
 
-@export var destination : PackedScene
 @export var lockedColor: Color = Color.RED
 @export var unlockedColor: Color = Color.GREEN
 
 @onready var light: ColorRect = $Light
+@onready var collision_shape: CollisionShape2D = $CollisionShape2D
 @onready var progress_label: Label = $ProgressLabel
 @onready var unlocked_sound: AudioStreamPlayer2D = $UnlockedSound
 @onready var coin_sprite: AnimatedSprite2D = $AnimatedSprite2D
@@ -19,17 +19,7 @@ func _ready():
 	light.color = lockedColor
 	progress_label.text = str(required - coins)
 
-func _on_body_entered(body) -> void:
-	if locked:
-		return
-	
-	if (body.name == "Player"):
-		call_deferred("load_level")
-
-func load_level():
-	get_tree().change_scene_to_packed(destination)
-
-func register_coin(_coin: Coin):
+func register_coin(_coin: GateCoin):
 	required = required + 1
 	update_label()
 
@@ -40,6 +30,7 @@ func insert_coin():
 	if coins >= required && locked:
 		locked = false
 		light.color = unlockedColor
+		collision_shape.disabled = true
 		coin_sprite.visible = false
 		unlocked_sound.play()
 

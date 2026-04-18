@@ -1,26 +1,27 @@
-[gd_scene format=3 uid="uid://bb7ccon8eu531"]
+[gd_scene format=3 uid="uid://vbnjpsxhiqkg"]
 
-[ext_resource type="Script" uid="uid://b7gfvk5tenndh" path="res://scenes/objects/coin.gd" id="1_85sq4"]
-[ext_resource type="SpriteFrames" uid="uid://sk5q1870y7gm" path="res://animations/gold_coin.tres" id="3_5towm"]
-[ext_resource type="AudioStream" uid="uid://hdy6n0v88grd" path="res://audio/effects/coin.wav" id="3_kbgq6"]
+[ext_resource type="Script" uid="uid://dje5ch6f6ycmp" path="res://scenes/objects/gate_coin.gd" id="1_p8sur"]
+[ext_resource type="AudioStream" uid="uid://hdy6n0v88grd" path="res://audio/effects/coin.wav" id="2_f6ksr"]
+[ext_resource type="SpriteFrames" uid="uid://dtwcmmmwiq77k" path="res://animations/silver_coin.tres" id="3_p8sur"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_870v7"]
 radius = 8.0
 
-[node name="Coin" type="Area2D" unique_id=57963031]
-script = ExtResource("1_85sq4")
+[node name="GateCoin" type="Area2D" unique_id=57963031]
+script = ExtResource("1_p8sur")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1919194732]
 shape = SubResource("CircleShape2D_870v7")
 
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="." unique_id=763006881]
-stream = ExtResource("3_kbgq6")
+stream = ExtResource("2_f6ksr")
+pitch_scale = 0.8
 bus = &"Effects"
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1565788247]
-sprite_frames = ExtResource("3_5towm")
+sprite_frames = ExtResource("3_p8sur")
 autoplay = "default"
-frame_progress = 0.7295036
+frame_progress = 0.9702981
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]
 [connection signal="finished" from="AudioStreamPlayer2D" to="." method="_on_audio_stream_player_2d_finished"]
