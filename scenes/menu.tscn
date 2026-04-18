@@ -285,7 +285,7 @@ focus_previous = NodePath("../PlayButton")
 text = "Quit"
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=242946145]
-position = Vector2(160, 576)
+position = Vector2(79, 289)
 sprite_frames = SubResource("SpriteFrames_g6gyw")
 animation = &"idle"
 autoplay = "idle"

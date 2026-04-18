@@ -267,7 +267,7 @@ text = "Main Menu
 "
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1027919580]
-position = Vector2(992, 576)
+position = Vector2(480, 273)
 scale = Vector2(2, 2)
 sprite_frames = SubResource("SpriteFrames_7g6bj")
 animation = &"idle"
