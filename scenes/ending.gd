@@ -4,21 +4,12 @@ extends Node
 
 func _ready():
 	play_again_button.grab_focus()
-	Autoloaded.get_node("Levels").stop()
-	Autoloaded.get_node("Ending").play()
+	music.start_ending_music()
 
 func _on_play_again_pressed():
-	play_again()
-
-func _on_main_menu_pressed():
-	main_menu()
-
-func play_again():
-	Autoloaded.get_node("Ending").stop()
-	Autoloaded.get_node("Levels").play()
+	music.start_level_music()
 	get_tree().change_scene_to_file("res://scenes/levels/level0.tscn")
 
-func main_menu():
-	Autoloaded.get_node("Ending").stop()
-	Autoloaded.get_node("Menu").play()
+func _on_main_menu_pressed():
+	music.start_menu_music()
 	get_tree().change_scene_to_file("res://scenes/menu.tscn")

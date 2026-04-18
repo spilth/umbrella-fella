@@ -22,7 +22,7 @@ config/icon="res://icon.svg"
 
 [autoload]
 
-Autoloaded="*res://scenes/autoloaded.tscn"
+music="*res://scenes/music.tscn"
 
 [display]
 
