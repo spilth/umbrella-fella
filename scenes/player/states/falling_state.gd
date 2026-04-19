@@ -1,12 +1,13 @@
-extends State
-
 class_name FallingState
+
+extends PlayerState
 
 func enter() -> void:
 	character.animated_sprite_2d.animation = "falling"
 
-func physics_process(delta: float) -> State:
-	var direction = Input.get_axis("Left", "Right")
+func physics_process(delta: float) -> PlayerState:
+	var direction: float = Input.get_axis("Left", "Right")
+	
 	if direction:
 		character.velocity.x = direction * SPEED
 	else:
@@ -28,4 +29,3 @@ func physics_process(delta: float) -> State:
 	
 	
 	return null
-

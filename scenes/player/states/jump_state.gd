@@ -1,13 +1,13 @@
-extends State
-
 class_name JumpState
+
+extends PlayerState
 
 func enter() -> void:
 	character.jump_sound.play()
 	character.velocity.y = JUMP_VELOCITY
 	character.animated_sprite_2d.animation = "jumping"
 
-func physics_process(delta: float) -> State:
+func physics_process(delta: float) -> PlayerState:
 	character.velocity.y += gravity * delta
 
 	if character.velocity.y > 0:
@@ -16,7 +16,8 @@ func physics_process(delta: float) -> State:
 	if character.is_on_floor():
 		return GroundedState.new(character)
 
-	var direction = Input.get_axis("Left", "Right")
+	var direction: float = Input.get_axis("Left", "Right")
+	
 	if direction:
 		character.velocity.x = direction * SPEED
 	else:

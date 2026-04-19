@@ -4,12 +4,11 @@ extends StaticBody2D
 
 @export var lockedColor: Color = Color.RED
 @export var unlockedColor: Color = Color.GREEN
-
-@onready var light: ColorRect = $Light
-@onready var collision_shape: CollisionShape2D = $CollisionShape2D
-@onready var progress_label: Label = $ProgressLabel
-@onready var unlocked_sound: AudioStreamPlayer2D = $UnlockedSound
-@onready var coin_sprite: AnimatedSprite2D = $AnimatedSprite2D
+@export var light: ColorRect
+@export var collision_shape: CollisionShape2D
+@export var progress_label: Label
+@export var unlocked_sound: AudioStreamPlayer2D
+@export var coin_sprite: AnimatedSprite2D
 
 var locked: bool = true
 var coins: int = 0

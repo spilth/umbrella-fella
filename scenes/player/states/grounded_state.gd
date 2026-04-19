@@ -1,15 +1,16 @@
-extends State
-
 class_name GroundedState
 
-func physics_process(_delta: float) -> State:
+extends PlayerState
+
+func physics_process(_delta: float) -> PlayerState:
 	if Input.is_action_just_pressed("Jump") and character.is_on_floor():
 		return JumpState.new(character)
 
 	if not character.is_on_floor():
 		return FallingState.new(character)
 	
-	var direction = Input.get_axis("Left", "Right")
+	var direction: float = Input.get_axis("Left", "Right")
+	
 	if direction:
 		character.velocity.x = direction * SPEED
 	else:

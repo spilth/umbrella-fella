@@ -8,8 +8,12 @@
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_gmvfn"]
 size = Vector2(32, 48)
 
-[node name="Exit" type="Area2D" unique_id=1834716288]
+[node name="Exit" type="Area2D" unique_id=1834716288 node_paths=PackedStringArray("light", "progress_label", "unlocked_sound", "coin_sprite")]
 script = ExtResource("1_752dx")
+light = NodePath("Light")
+progress_label = NodePath("ProgressLabel")
+unlocked_sound = NodePath("UnlockedSound")
+coin_sprite = NodePath("AnimatedSprite2D")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1633299822]
 position = Vector2(32, -24)

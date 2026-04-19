@@ -1,18 +1,15 @@
 extends CharacterBody2D
 
-const SPEED = 125.0
-const JUMP_VELOCITY = -225.0
+@export var animated_sprite_2d: AnimatedSprite2D
+@export var float_sound: AudioStreamPlayer2D
+@export var jump_sound: AudioStreamPlayer2D
 
-@onready var animated_sprite_2d = $AnimatedSprite2D
-@onready var float_sound = $FloatSound
-@onready var jump_sound = $JumpSound
-
-var character_state_machine: CharacterStateMachine
+var player_state_machine: PlayerStateMachine
 
 func _ready():
-	character_state_machine = CharacterStateMachine.new(self)
+	player_state_machine = PlayerStateMachine.new(self)
 
 func _physics_process(delta):		
-	character_state_machine.physics_process(delta)
+	player_state_machine.physics_process(delta)
 	
 	move_and_slide()
